@@ -1,0 +1,51 @@
+<head>
+  <title>fraze-r0.2</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+  <div class="container">
+    <h1 class="heading">fraze!</h1>
+    <p class="lead">
+      {{#if startGame}}
+        {{> start}}
+      {{else}}
+        {{#if gameOn}}
+          {{> game}}
+        {{else}}
+          {{> gameOver}}
+        {{/if}}
+      {{/if}}
+    </p>
+
+
+    <div class="footer">
+      <p>by peter lawson, with <a href="https://meteor.com">meteor</a> and <a href="https://wordnik.com">wordnik</a></p> 
+    </div>
+
+  </div>
+
+</body>
+
+<template name="game">
+  <p>the word is</p>
+  <p><h1>{{currentWord}}</h1></p>
+  <p></p>
+  <p>{{currentTeam}} guessing now</p>
+  <button class="btn btn-default" id="next-word">Next word</button>
+  <button class="btn btn-default" id="skip-word">Skip word</button>
+  <p>{{time}}</p>
+</template>
+
+<template name="gameOver">
+  <p>{{winner}} wins the round!</p>
+  <p></p>
+  <p>Score:</p>
+  <p>Team 1: {{team1Score}}      Team 2: {{team2Score}}</p>
+  <p></p>
+  <button class="btn btn-default" id="play-again">Play again</button>
+</template>
+
+<template name="start">
+  <button class="btn btn-default" id="start">START</button>
+</template>

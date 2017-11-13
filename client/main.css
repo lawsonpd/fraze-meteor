@@ -1,0 +1,27 @@
+/* CSS declarations go here */
+
+.starter-template {
+  padding: 60px 15px;
+  text-align: center;
+}
+
+body {
+  padding-top: 50px;
+  text-align: center;
+}
+
+body h1 {
+  margin: 40px;
+}
+
+/*
+.lead, heading {
+  text-align: center;
+}
+*/
+
+.footer {
+  padding: 60px 15px;
+  margin: 40px 40px;
+  text-align: center;
+}
