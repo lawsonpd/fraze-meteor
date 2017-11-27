@@ -5,6 +5,10 @@
   text-align: center;
 }
 
+#instructions {
+  margin-top: 80px;
+}
+
 body {
   padding-top: 50px;
   text-align: center;
