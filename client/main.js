@@ -5,8 +5,10 @@
 
 import { HTTP } from 'meteor/http';
 
+const wordnik_key = process.env.WORDNIK_KEY;
+
 function requestWord () {
-  HTTP.get("http://api.wordnik.com:80/v4/words.json/randomWord?hasDictionaryDef=false&includePartOfSpeech=idiom&minCorpusCount=1000&maxCorpusCount=-1&minDictionaryCount=1&maxDictionaryCount=-1&minLength=5&maxLength=-1&api_key=88151505619400fe187d61357090727518edebec080dfdb55",
+  HTTP.get("http://api.wordnik.com:80/v4/words.json/randomWord?hasDictionaryDef=false&includePartOfSpeech=idiom&minCorpusCount=1000&maxCorpusCount=-1&minDictionaryCount=1&maxDictionaryCount=-1&minLength=5&maxLength=-1&api_key=" + wordnik_key,
     function (error, response) {
       if (error) {
         console.log(error);
